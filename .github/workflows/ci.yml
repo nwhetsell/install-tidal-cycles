@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test-bot:
+    strategy:
+      matrix:
+        os: [macos-26, macos-15, macos-14]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v6
+
+    - name: Validate script
+      run: shellcheck install_tidal_cycles.sh
+
+    - name: Run script
+      run: ./install_tidal_cycles.sh
