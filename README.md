@@ -18,7 +18,7 @@ button, and then set “Ghci Path” to
 /opt/homebrew/opt/ghc/bin/ghci
 ```
 
-Or, *if `~/.pulsar/config.cson` already exists*, run:
+Or, **if `~/.pulsar/config.cson` already exists**, run:
 
 ```sh
 cat << EOS >> ~/.pulsar/config.cson
