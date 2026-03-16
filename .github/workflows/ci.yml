@@ -17,7 +17,9 @@ jobs:
       uses: actions/checkout@v6
 
     - name: Validate script
-      run: shellcheck install_tidal_cycles.sh
+      run: |
+        brew install shellcheck
+        shellcheck install_tidal_cycles.sh
 
     - name: Run script
       run: ./install_tidal_cycles.sh
