@@ -22,4 +22,4 @@ jobs:
         shellcheck install_tidal_cycles.sh
 
     - name: Run script
-      run: ./install_tidal_cycles.sh
+      run: /bin/sh -c "$(cat install_tidal_cycles.sh)"
